@@ -16,6 +16,12 @@ import { Icon } from "astro-icon/components";
           "data-theme",
           localStorage.getItem("theme")
         );
+
+      document.addEventListener("visibilitychange", () => {
+        document.visibilityState === "hidden"
+          ? (document.title = "Contact Me 😎👍")
+          : (document.title = "Alejandro Baez CV");
+      });
     </script>
     <script>
       import { themeChange } from "theme-change";
